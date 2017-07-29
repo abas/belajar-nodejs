@@ -32,3 +32,9 @@ var Abas = new Info("Abas","akhmadbasir5@gmail.com","082139672355");
 console.log(Abas.nama);
 console.log(Abas.email);
 console.log(Abas.nohp);
+
+br();
+
+var Xavier = new Info("xavier");
+
+console.log(Xavier);

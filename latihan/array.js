@@ -1,4 +1,4 @@
-function br() {
+exports.br = function() {
   console.log("==========================================");
 }
 function print(x) {
@@ -16,11 +16,11 @@ var index=0;while (index<abas.length) {
   console.log(kontex[index]+abas[index]);
   index++;
 }
-br();
+// br();
 abas.forEach(function(item,index){
   console.log(kontex[index]+item);
 });
-br();
+// br();
 var array = [1];
 printArray(array);
 print("after push");
