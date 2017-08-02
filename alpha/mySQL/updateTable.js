@@ -13,10 +13,16 @@ con.connect(function(err) {
   }console.log('connected!');
 
 
-  var UPDATEstate = "UPDATE mhs SET id='2' WHERE nama='Antonius Billy'";
+  var UPDATEstate = "UPDATE mhs SET id='4' WHERE nama='Nganu Iki'";
   con.query(UPDATEstate,function(err) {
-    if(err) console.log('id [2] notFound!');
-    else console.log('id updated!');
+    if(err) {
+      console.log('nama [shit] notFound!');
+      console.log('or [id] is being used!');
+      throw err;
+    }
+    else {
+      console.log('id updated!');
+    }
   })
 
   con.end();
