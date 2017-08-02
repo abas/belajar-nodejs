@@ -12,13 +12,13 @@ con.connect(function(err) {
     throw err;
   }console.log('connected!');
 
-  // var SQLstate = "DROP TABLE mhs"; // to drop table
-  var SQLstate = "CREATE TABLE mhs (id INT NOT NULL AUTO_INCREMENT,"+
-                 " nama VARCHAR(128), nim VARCHAR(15), PRIMARY KEY (id))";
+  var SQLstate = "INSERT INTO mhs (nama,nim)"+
+                 " VALUES ('Muhamad Afifudin','A11.2015.09103')";
+
   con.query(SQLstate,function(err,result) {
     if (err) {
       throw err;
-    }console.log('Table Created!');
+    }console.log('Query Inserted!');
     // }console.log('Table Deleted!'); // message
     con.end();
   })

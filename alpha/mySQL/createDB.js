@@ -24,5 +24,6 @@ con.connect(function(err) {
     if (err) {
       throw err;
     }console.log('Database Created!');
+    con.end();
   })
 })
