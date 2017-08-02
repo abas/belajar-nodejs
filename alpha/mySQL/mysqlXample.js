@@ -1,20 +1,17 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host : 'localhost',
-  user : 'root',
-  password : 'ahmadbasir'
+  host : 'localhost', // local address
+  user : 'root', // user root
+  password : 'ahmadbasir', // pass root
+  database : 'nodejs' // database root
 });
 
 con.connect(function(err) {
   if (err) {
     throw err;
-  }console.log('connected!');
-  con.query(sql,function(err,result) {
-    if (err) {
-      throw err;
-    }console.log('result : '+result);
-    con.end(); // close connection
-
-  })
+  }else{
+    console.log('connected!');
+  }
 })
+con.end();

@@ -13,7 +13,7 @@ con.connect(function(err) {
   }console.log('connected!');
 
   var SQLstate = "INSERT INTO mhs (nama,nim)"+
-                 " VALUES ('Muhamad Afifudin','A11.2015.09103')";
+                 " VALUES ('Antonius Billy','A11.2014.08170')";
 
   con.query(SQLstate,function(err,result) {
     if (err) {
