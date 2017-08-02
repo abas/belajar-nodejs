@@ -1,5 +1,5 @@
 var userM = 'akhmadbasir5@gmail.com';
-var passM = 'xaviergoogle123';
+// var passM = '';
 
 exports.authMail = function () {
   var temp = {
@@ -15,4 +15,12 @@ exports.getReciver = function (reciver) {
 
 exports.test = function (a,b) {
   return a+b;
+};
+
+exports.getEmail = function(){
+  return userM;
+}
+
+exports.getPass = function () {
+  return passM;
 };
