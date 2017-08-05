@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= judul %></title>
+    <title>
+      <%= title %>
+      | total : <%= data.length %>
+    </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= judul %></h1>
-    <p>Welcome to <%= judul %></p>
+    <p>Input</p>
+    <form action="/films" method="post">
+      nama : <input type="text" name="title" required> <br>
+      tahun : <input type="number" name="year" required>
+      <input type="submit" name="submit" value="kirim">
+    </form>
+    <br>
+    <table border="1">
+      <tr>
+        <td>Judul Film</td>
+        <td>Tahun Terbit</td>
+        <td>id Film</td>
+      </tr>
+      <% data.forEach(function(film){ %>
+      <tr>
+        <td><%= film.title %></td>
+        <td><%= film.year %></td>
+        <td><%= film.id %></td>
+      </tr>
+      <% }) %>
+      <tr>
+        <td colspan="2">total film </td>
+        <td><%= data.length %></td>
+      </tr>
+    </table>
   </body>
 </html>

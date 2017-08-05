@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test',{useMongoClient:true});
 
 var films = require('./routes/films');
 var index = require('./routes/index');
@@ -28,6 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/films',films);
+app.use('/:id',films);
 app.use('/',auth);
 app.use('/', index);
 app.use('/users', users);
