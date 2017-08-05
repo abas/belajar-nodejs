@@ -30,14 +30,20 @@ module.exports = {
   read : function (req,res) {
     Film.find({},function (err,film) {
       if(err)res.json(err);
-      res.json({
+      res.render('film',{
+        title : 'film',
         data : film
-      });
+      })
+      // res.json({
+      //   data : film
+      // });
     })
   },
 
   delete : function (req,res) {
     Film.findByIdAndRemove(req.params.id,function (err) {
+      console.log('berhasil di delete!');
+
       if(err){
         res.json({
           msg : 'id ne gaono cuk'

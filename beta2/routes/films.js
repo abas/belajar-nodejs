@@ -4,7 +4,7 @@ var router = express.Router()
 
 router.post('/',filmController.create)
 router.get('/',filmController.read)
-router.delete('/:id',filmController.delete)
+router.delete('/delete',filmController.delete)
 
 // DELETE
 // router.delete('/:id',function (req,res) {
